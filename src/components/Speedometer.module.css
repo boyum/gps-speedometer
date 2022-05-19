@@ -1,0 +1,27 @@
+.speedometer {
+  align-items: center;
+  background-color: #32bf84;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgb(50 191 132 / 50%);
+  color: #cafffb;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  justify-content: center;
+  height: 90vh;
+  gap: 0.5rem;
+  max-height: 18.75rem;
+  max-width: 25rem;
+  text-shadow: 1px 1px 2px #048243;
+  width: 90vw;
+}
+
+.velocity {
+  font-size: 3em;
+}
+
+.unit {
+  font-family: system-ui;
+}
