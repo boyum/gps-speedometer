@@ -16,7 +16,7 @@ export const Speedometer: Component = () => {
       }
 
       const newVelocity = calculateVelocity(oldPosition, newPosition);
-      if (newVelocity) {
+      if (newVelocity != null) {
         setVelocity(newVelocity);
       }
     });
