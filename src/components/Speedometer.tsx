@@ -7,7 +7,7 @@ export const Speedometer: Component = () => {
   const [position, setPosition] = createSignal<GeolocationPosition>();
 
   createEffect(() => {
-    navigator.geolocation.watchPosition(newPosition => {
+    const watchId = navigator.geolocation.watchPosition(newPosition => {
       const oldPosition = position();
 
       if (!oldPosition) {
@@ -20,6 +20,8 @@ export const Speedometer: Component = () => {
         setVelocity(newVelocity);
       }
     });
+
+    return navigator.geolocation.clearWatch(watchId);
   });
 
   const formattedVelocity = createMemo(() => formatVelocity(velocity()));
